@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Úvod – Deskovky</title>
+<meta name="description" content="Přehled deskových her, výběr hry podle počtu hráčů a času a základní tipy pro začátečníky.">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header>
+<div class="bar">
+<a class="logo" href="index.html">🎲 Deskovky</a>
+<button id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav id="menu" aria-label="Hlavní navigace">
+<ul>
+<li><a href="index.html" aria-current="page">Úvod</a></li>
+<li><a href="hry.html">Katalog her</a></li>
+<li><a href="zacatecnici.html">Pro začátečníky</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="obsah">
+<h1>Co dnes budeme hrát?</h1>
+<p class="lead">Deskové hry jsou způsob, jak strávit večer s lidmi bez obrazovek. Tady najdete výběr her a nástroj, který poradí podle počtu hráčů a času.</p>
+
+<h2>Poradce</h2>
+<form id="picker" novalidate>
+<label for="players">Počet hráčů
+<select id="players"><option value="">Vyberte…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+</label>
+<label for="time">Kolik máte času?
+<select id="time"><option value="">Vyberte…</option><option value="30">Do 30 minut</option><option value="60">Do hodiny</option><option value="240">Klidně celý večer</option></select>
+</label>
+<label for="pick-genre">Žánr
+<select id="pick-genre"><option value="">Jakýkoliv</option></select>
+</label>
+<p class="err" id="pick-err" role="alert"></p>
+<button type="submit">Poraď mi hru</button>
+</form>
+<p class="out" id="pick-out" aria-live="polite"></p>
+
+<h2>Hod kostkou</h2>
+<p>Chybí vám kostka? Hoďte si.</p>
+<p class="die" id="die" aria-hidden="true">⚀</p>
+<button type="button" id="roll">Hodit kostkou</button>
+<p id="roll-out" aria-live="polite"></p>
+
+<h2>Proč hrát deskovky</h2>
+<div class="grid cols">
+<article class="card"><h3>Hrajete spolu</h3><p>Mluvíte, smějete se a domlouváte se, ať hra funguje.</p></article>
+<article class="card"><h3>Pro každého</h3><p>Od 15minutových párty her po kampaně na desítky sezení.</p></article>
+<article class="card"><h3>Bez techniky</h3><p>Stačí stůl, krabice a ochotní spoluhráči.</p></article>
+</div>
+</main>
+<footer>
+<p>Školní projekt. Názvy her patří jejich vydavatelům, web neobsahuje obrázky ani texty z krabic.</p>
+</footer>
+</body>
+</html>

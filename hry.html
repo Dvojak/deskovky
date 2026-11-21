@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog her – Deskovky</title>
+<meta name="description" content="Přehled deskových her, výběr hry podle počtu hráčů a času a základní tipy pro začátečníky.">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header>
+<div class="bar">
+<a class="logo" href="index.html">🎲 Deskovky</a>
+<button id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav id="menu" aria-label="Hlavní navigace">
+<ul>
+<li><a href="index.html">Úvod</a></li>
+<li><a href="hry.html" aria-current="page">Katalog her</a></li>
+<li><a href="zacatecnici.html">Pro začátečníky</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="obsah">
+<h1>Katalog her</h1>
+<p class="lead">Několik osvědčených her z různých žánrů. Výsledky můžete filtrovat.</p>
+<div class="filters" role="search">
+<label for="q">Hledat podle názvu<input id="q" type="search" autocomplete="off"></label>
+<label for="genre">Žánr<select id="genre"><option value="">Všechny</option></select></label>
+<label for="cnt">Počet hráčů<select id="cnt"><option value="">Libovolný</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+</div>
+<p id="count" aria-live="polite"></p>
+<div id="list" class="grid cols"></div>
+<template id="game-tpl">
+<article class="card">
+<h3></h3>
+<p class="meta"></p>
+<p class="desc"></p>
+<span class="tag"></span>
+</article>
+</template>
+</main>
+<footer>
+<p>Školní projekt. Názvy her patří jejich vydavatelům, web neobsahuje obrázky ani texty z krabic.</p>
+</footer>
+</body>
+</html>

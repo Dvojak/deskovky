@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – Deskovky</title>
+<meta name="description" content="Přehled deskových her, výběr hry podle počtu hráčů a času a základní tipy pro začátečníky.">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header>
+<div class="bar">
+<a class="logo" href="index.html">🎲 Deskovky</a>
+<button id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav id="menu" aria-label="Hlavní navigace">
+<ul>
+<li><a href="index.html">Úvod</a></li>
+<li><a href="hry.html">Katalog her</a></li>
+<li><a href="zacatecnici.html">Pro začátečníky</a></li>
+<li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="obsah">
+<h1>Doporučte hru</h1>
+<p class="lead">Znáte skvělou hru, která tu chybí? Napište nám.</p>
+<form id="contact" novalidate>
+<label for="name">Jméno<input id="name" autocomplete="name"><span class="err" id="e-name" role="alert"></span></label>
+<label for="email">E-mail<input id="email" type="email" autocomplete="email"><span class="err" id="e-email" role="alert"></span></label>
+<label for="fav">Žánr<select id="fav"><option value="">Vyberte…</option></select><span class="err" id="e-fav" role="alert"></span></label>
+<label for="msg">Zpráva<textarea id="msg" rows="4"></textarea><span class="err" id="e-msg" role="alert"></span></label>
+<button type="submit">Odeslat</button>
+</form>
+<p id="ok" class="card" hidden role="status"></p>
+</main>
+<footer>
+<p>Školní projekt. Názvy her patří jejich vydavatelům, web neobsahuje obrázky ani texty z krabic.</p>
+</footer>
+</body>
+</html>
